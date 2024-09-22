@@ -1,0 +1,11 @@
+{
+  "extends": "./tsconfig.json",
+  "include": [
+    ".eslintrc.json", // ESLint's config must be included
+    "app/**/*.tsx", // App files
+    "components/**/*.tsx" // Components files
+  ],
+  "exclude": [
+    "node_modules" // Exclude node_modules
+  ]
+}
