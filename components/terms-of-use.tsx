@@ -2,16 +2,16 @@ import React from 'react';
 import Header from '@/components/header';
 import Footer from '@/components/footer';
 
-export default function TermsOfUse() {
+export function TermsOfUse() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#020B2D] via-[#1E0B4A] to-[#0A3A7E] text-white">
+    <div style={{ minHeight: '100vh', backgroundColor: '#020B2D', color: 'white' }}>
       <Header />
-      <main className="container mx-auto py-8 px-4">
-        <section>
-            <h1>Privacy Policy</h1>
+      <main style={{ maxWidth: '800px', margin: '0 auto', padding: '2rem' }}>
+        <article style={{ backgroundColor: 'white', color: 'black', padding: '2rem', borderRadius: '8px', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)', marginTop: '3rem' }}>
+          <h1>Privacy Policy</h1>
             <p>Last updated: September 22, 2024</p>
             <p>This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.</p>
-            <p>We use Your Personal data to provide and improve the Service. By using the Service, You agree to the collection and use of information in accordance with this Privacy Policy. This Privacy Policy has been created with the help of the <a href="https://www.termsfeed.com/privacy-policy-generator/" target="_blank" rel="noopener">Privacy Policy Generator</a>.</p>
+            <p>We use Your Personal data to provide and improve the Service. By using the Service, You agree to the collection and use of information in accordance with this Privacy Policy. This Privacy Policy has been created with the help of the <a  href="https://www.termsfeed.com/privacy-policy-generator/" rel="noopener" target="_blank">Privacy Policy Generator</a>.</p>
             <h2>Interpretation and Definitions</h2>
             <h3>Interpretation</h3>
             <p>The words of which the initial letter is capitalized have meanings defined under the following conditions. The following definitions shall have the same meaning regardless of whether they appear in singular or in plural.</p>
@@ -84,7 +84,7 @@ export default function TermsOfUse() {
             <li><strong>Cookies or Browser Cookies.</strong> A cookie is a small file placed on Your Device. You can instruct Your browser to refuse all Cookies or to indicate when a Cookie is being sent. However, if You do not accept Cookies, You may not be able to use some parts of our Service. Unless you have adjusted Your browser setting so that it will refuse Cookies, our Service may use Cookies.</li>
             <li><strong>Web Beacons.</strong> Certain sections of our Service and our emails may contain small electronic files known as web beacons (also referred to as clear gifs, pixel tags, and single-pixel gifs) that permit the Company, for example, to count users who have visited those pages or opened an email and for other related website statistics (for example, recording the popularity of a certain section and verifying system and server integrity).</li>
             </ul>
-            <p>Cookies can be &quot;Persistent&quot; or &quot;Session&quot; Cookies. Persistent Cookies remain on Your personal computer or mobile device when You go offline, while Session Cookies are deleted as soon as You close Your web browser. You can learn more about cookies on <a href="https://www.termsfeed.com/blog/cookies/#What_Are_Cookies" target="_blank" rel="noopener">TermsFeed website</a> article.</p>
+            <p>Cookies can be &quot;Persistent&quot; or &quot;Session&quot; Cookies. Persistent Cookies remain on Your personal computer or mobile device when You go offline, while Session Cookies are deleted as soon as You close Your web browser. You can learn more about cookies on <a href="https://www.termsfeed.com/blog/cookies/#What_Are_Cookies" rel="noopener" target="_blank">TermsFeed website</a> article.</p>
             <p>We use both Session and Persistent Cookies for the purposes set out below:</p>
             <ul>
             <li>
@@ -172,7 +172,7 @@ export default function TermsOfUse() {
             </ul>
             <h3>Security of Your Personal Data</h3>
             <p>The security of Your Personal Data is important to Us, but remember that no method of transmission over the Internet, or method of electronic storage is 100% secure. While We strive to use commercially acceptable means to protect Your Personal Data, We cannot guarantee its absolute security.</p>
-            <h2>Children&apos;s Privacy</h2>
+            <h2>Children's Privacy</h2>
             <p>Our Service does not address anyone under the age of 13. We do not knowingly collect personally identifiable information from anyone under the age of 13. If You are a parent or guardian and You are aware that Your child has provided Us with Personal Data, please contact Us. If We become aware that We have collected Personal Data from anyone under the age of 13 without verification of parental consent, We take steps to remove that information from Our servers.</p>
             <p>If We need to rely on consent as a legal basis for processing Your information and Your country requires consent from a parent, We may require Your parent's consent before We collect and use that information.</p>
             <h2>Links to Other Websites</h2>
@@ -187,7 +187,7 @@ export default function TermsOfUse() {
             <ul>
             <li>By email: ely@upexgalaxy.com</li>
             </ul>
-        </section>
+        </article>
       </main>
       <Footer />
     </div>

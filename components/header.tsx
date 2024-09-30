@@ -10,8 +10,10 @@ import {
   SheetContent,
   SheetTrigger,
 } from "@/components/ui/sheet"
+import { useTranslations} from "next-intl";
 
 export default function Header() {
+    const header = useTranslations("header");
     const [scrolled, setScrolled] = useState(false)
 
     useEffect(() => {
@@ -22,6 +24,9 @@ export default function Header() {
         return () => window.removeEventListener('scroll', handleScroll)
     }, [])
 
+    const handleLoginClick = () => {
+        window.open('https://upexgalaxy47.atlassian.net/jira/', '_blank', 'noopener,noreferrer');
+    };
 
     return (
         <header className={`fixed w-full z-10 transition-all duration-300 ${scrolled ? 'bg-[#020B2D] shadow-lg' : 'bg-transparent'}`}>
@@ -39,15 +44,15 @@ export default function Header() {
             {/* <div className="text-xl md:text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#00FFFF] to-[#8A2BE2]">UPEX</div> */}
             <nav className="hidden md:block">
                 <ul className="flex space-x-4 md:space-x-6">
-                <li><Link href="#" className="hover:text-[#00FFFF]">Sandbox</Link></li>
-                <li><Link href="#" className="hover:text-[#00FFFF]">Blackhole</Link></li>
-                <li><Link href="#" className="hover:text-[#00FFFF]">Galaxy</Link></li>
-                <li><Link href="#" className="hover:text-[#00FFFF]">Satellite</Link></li>
-                <li><Link href="#" className="hover:text-[#00FFFF]">Community</Link></li>
+                <li><Link target="_blank" href="https://upexgalaxy47.atlassian.net/jira/software/c/projects/BOX/boards/24" className="hover:text-[#00FFFF]">{header("workspace")}</Link></li>
+                <li><Link target="_blank" href="https://upex.docu.upexgalaxy.com/wiki/x/A4AFAQ" className="hover:text-[#00FFFF]">{header("courses")}</Link></li>
+                <li><Link target="_blank" href="https://upex.docu.upexgalaxy.com/wiki/x/CACCAQ" className="hover:text-[#00FFFF]">{header("plans")}</Link></li>
+                <li><Link target="_blank" href="https://wa.me/5491156633437" className="hover:text-[#00FFFF]">{header("assistance")}</Link></li>
+                <li><Link target="_blank" href="https://upexqa.slack.com" className="hover:text-[#00FFFF]">{header("community")}</Link></li>
                 </ul>
             </nav>
             <div className="flex items-center space-x-4">
-                <Button variant="outline" className="hidden md:inline-flex bg-[#8A2BE2] text-white hover:bg-[#6A1B9A]">Login</Button>
+                <Button onClick={handleLoginClick} variant="outline" className="hidden md:inline-flex bg-[#8A2BE2] text-white hover:bg-[#6A1B9A]">Login</Button>
                 <Sheet>
                 <SheetTrigger asChild>
                     <Button variant="ghost" size="icon" className="md:hidden">
@@ -57,12 +62,12 @@ export default function Header() {
                 </SheetTrigger>
                 <SheetContent side="right" className="w-[300px] sm:w-[400px] bg-[#020B2D]">
                     <nav className="flex flex-col space-y-4 mt-8">
-                    <Link href="#" className="text-lg hover:text-[#00FFFF]">Sandbox</Link>
-                    <Link href="#" className="text-lg hover:text-[#00FFFF]">Blackhole</Link>
-                    <Link href="#" className="text-lg hover:text-[#00FFFF]">Galaxy</Link>
-                    <Link href="#" className="text-lg hover:text-[#00FFFF]">Satellite</Link>
-                    <Link href="#" className="text-lg hover:text-[#00FFFF]">Community</Link>
-                    <Button className="mt-4 bg-[#8A2BE2] text-white hover:bg-[#6A1B9A]">Sign In</Button>
+                    <Link href="https://upexgalaxy47.atlassian.net/jira/software/c/projects/BOX/boards/24" className="text-lg hover:text-[#00FFFF]">{header("workspace")}</Link>
+                    <Link href="https://upex.docu.upexgalaxy.com/wiki/x/A4AFAQ" className="text-lg hover:text-[#00FFFF]">{header("courses")}</Link>
+                    <Link href="https://upex.docu.upexgalaxy.com/wiki/x/CACCAQ" className="text-lg hover:text-[#00FFFF]">{header("plans")}</Link>
+                    <Link href="https://wa.me/5491156633437" className="text-lg hover:text-[#00FFFF]">{header("assistance")}</Link>
+                    <Link href="https://upexqa.slack.com" className="text-lg hover:text-[#00FFFF]">{header("community")}</Link>
+                    <Button onClick={handleLoginClick} className="mt-4 bg-[#8A2BE2] text-white hover:bg-[#6A1B9A]">Login</Button>
                     </nav>
                 </SheetContent>
                 </Sheet>
