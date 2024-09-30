@@ -3,6 +3,7 @@
 import { useState, useEffect} from 'react'
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
+import Image from "next/image"
 import { Menu } from 'lucide-react'
 import {
   Sheet,
@@ -25,7 +26,17 @@ export default function Header() {
     return (
         <header className={`fixed w-full z-10 transition-all duration-300 ${scrolled ? 'bg-[#020B2D] shadow-lg' : 'bg-transparent'}`}>
             <div className="container mx-auto px-4 py-4 md:py-6 flex justify-between items-center">
-            <div className="text-xl md:text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#00FFFF] to-[#8A2BE2]">UPEX</div>
+            <Link href="/" className="flex items-center">
+                <Image
+                    src="/logo.png"
+                    alt="UPEX Logo"
+                    width={720}
+                    height={240}
+                    className="h-10 w-auto"
+                />
+                <span className="sr-only">UPEX</span>
+            </Link>
+            {/* <div className="text-xl md:text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#00FFFF] to-[#8A2BE2]">UPEX</div> */}
             <nav className="hidden md:block">
                 <ul className="flex space-x-4 md:space-x-6">
                 <li><Link href="#" className="hover:text-[#00FFFF]">Sandbox</Link></li>

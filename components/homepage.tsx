@@ -131,8 +131,12 @@ export function Homepage() {
             </TooltipProvider>
             
             <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-              <Button className="bg-[#00FFFF] hover:bg-[#00D0D0] text-[#020B2D]" size="lg">Try Free Workspace</Button>
-              <Button variant="outline" className="bg-transparent border-white text-white hover:bg-[#8A2BE2] hover:text-white hover:border-[#8A2BE2]" size="lg">Explore UPEX Galaxy</Button>
+              <a href="https://forms.gle/ke4kadCJWRrDkDTXA" target="_blank" rel="noopener">
+                <Button className="bg-[#00FFFF] hover:bg-[#00D0D0] text-[#020B2D]" size="lg">Try Free Workspace</Button>
+              </a>
+              <a href="https://upexdocu.atlassian.net/wiki/spaces/GX/overview" target="_blank" rel="noopener">
+                <Button variant="outline" className="bg-transparent border-white text-white hover:bg-[#8A2BE2] hover:text-white hover:border-[#8A2BE2]" size="lg">Explore UPEX Galaxy</Button>
+              </a>
               
             </div>
           </div>
