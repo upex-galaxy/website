@@ -17,7 +17,7 @@ export default function Header() {
             {/* <Link href="https://upex.docu.upexgalaxy.com/wiki/external/MjYwZjFmYzNlMDJjNDgwY2JlODNiMzIxYTUyMTQ1MzA" className="text-white hover:text-[#00FFFF] mb-2">{footer("termsOfService")}</Link> */}
             </div>
             <p className="text-sm text-gray-400">
-              © 2024 UPEX Quality LLC. | {footer("rightsReserved")}
+              © 2025 UPEX Quality LLC. | {footer("rightsReserved")}
             </p>
         </div>
     </footer>
